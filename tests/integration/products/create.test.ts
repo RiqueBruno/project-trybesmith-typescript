@@ -3,7 +3,7 @@ import chai, { expect } from 'chai';
 import chaiHttp from 'chai-http';
 
 import ProductModel from '../../../src/database/models/product.model';
-import ProductMock from '../../mocks/products.mock.teste';
+import ProductMock from '../../mocks/products.mock.tests';
 import app from '../../../src/app'; 
 
 const { validTransactionBody, validTransactionDB, emptyNameTransaction } = ProductMock;
