@@ -12,6 +12,13 @@ const setProducts = async (product: ProductInputtableTypes): Promise<ServiceResp
   return { status: 'CREATED', data: dataValues };
 };
 
+const getAllProducts = async (): Promise<ServiceResponse<Product[]>> => {
+  const products = await ProductModel.findAll();
+  const data = products.map(({ dataValues }) => dataValues);
+  return { status: 'OK', data };
+};
+
 export default {
   setProducts,
+  getAllProducts,
 };
